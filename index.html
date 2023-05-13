@@ -27,9 +27,59 @@
           <input type="checkbox" class="checkbox__input" />
         </label>
       </header>
-      <main class="main"></main>
-      <footer class="footer"></footer>
+      <main class="main">
+        <section class="category">
+          <h2 class="category__title"></h2>
+          <div class="category__container">
+            <article class="product-card">
+              <figure class="product-card__figure">
+                <img src="#" alt="#" class="product-card__image" />
+                <figcaption class="product-card__figcaption"></figcaption>
+              </figure>
+              <time class="product-card__date"></time>
+              <button type="button"></button>
+            </article>
+            <article class="product-card">
+              <figure class="product-card__figure">
+                <img src="#" alt="#" class="product-card__image" />
+                <figcaption class="product-card__figcaption"></figcaption>
+              </figure>
+              <time class="product-card__date"></time>
+              <button type="button"></button>
+            </article>
+            <article class="product-card">
+              <figure class="product-card__figure">
+                <img src="#" alt="#" class="product-card__image" />
+                <figcaption class="product-card__figcaption"></figcaption>
+              </figure>
+              <time class="product-card__date"></time>
+              <button type="button"></button>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        
+      </footer>
     </div>
+    <!-- Темплейт категории товаров -->
+    <template class="template-category">
+      <section class="category">
+        <h2 class="category__title"></h2>
+        <div class="category__container"></div>
+      </section>
+    </template>
+    <!-- Темплейт карточки товара -->
+    <template class="template-product-card">
+      <article class="product-card">
+        <figure class="product-card__figure">
+          <img src="#" alt="#" class="product-card__image" />
+          <figcaption class="product-card__figcaption"></figcaption>
+        </figure>
+        <time class="product-card__date"></time>
+        <button type="button"></button>
+      </article>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
