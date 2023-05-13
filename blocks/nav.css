@@ -3,3 +3,8 @@
   display: flex;
   gap: 10px;
 }
+
+.nav__list_position_footer {
+  flex-direction: column;
+  gap: 5px;
+}
