@@ -1,6 +1,5 @@
 import "./data.js";
 import "./utils.js";
-
 import { fruits, vegetables, berries } from "./data.js";
 import { getFormattedDate } from "./utils.js";
 
@@ -22,35 +21,26 @@ const changeColorScheme = () => {
 };
 
 const colorScheme = document.querySelector("#color-scheme");
-themeButton.addEventListener("click", changeColorScheme);
 
-const scrollIntoCategory = (id) => {
-  console.log(id);
-  const categoryTitle = document.querySelector(`#${id}-category`);
-  categoryTitle.scrollIntoView({
+const scrollIntoCategory = (id) => { 
+  const category = document.querySelector(`#${id}-category`);  
+  category.scrollIntoView({
     block: "start",
     behavior: "smooth",
   });
 };
 
-navItems.forEach((item) => {
-  item.addEventListener("click", () => scrollIntoCategory(item.id));
-});
-
 const createProductCard = (item) => {
   const card = templateProductCard
     .querySelector(".product-card")
     .cloneNode(true);
-
   const cardImage = card.querySelector(".product-card__image");
   const cardName = card.querySelector(".product-card__figcaption");
   const cardDate = card.querySelector(".product-card__date");
-
   cardImage.src = item.link;
   cardImage.alt = item.name;
   cardName.textContent = item.name;
   cardDate.textContent = getFormattedDate(Date.now());
-
   return card;
 };
 
@@ -61,6 +51,11 @@ const renderCard = (container, list) => {
   container.append(...cardList);
 };
 
+
+themeButton.addEventListener("click", changeColorScheme);
+navItems.forEach((item) => {
+  item.addEventListener("click", () => scrollIntoCategory(item.id));
+});
 renderCard(fruitsContainer, fruits);
 renderCard(vegetablesContainer, vegetables);
 renderCard(berriesContainer, berries);
