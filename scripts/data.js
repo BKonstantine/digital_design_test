@@ -1,6 +1,6 @@
 export const fruits = [
   {
-    name: "Грейпфрукт",
+    name: "Грейпфрут",
     link: "https://vkustorg.com/image/cache/Freypf/1-500x500.jpg",
   },
   {
