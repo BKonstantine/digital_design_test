@@ -1,5 +1,6 @@
 :root {
   --bg-color: #ffffff;
+  --bg-color-overlay: rgba(112, 112, 112, 0.4);
   --bg-color-hover: #f0efef;
   --bg-color-product-card: #ffffff;
 
