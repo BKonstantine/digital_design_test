@@ -6,7 +6,8 @@
 
 .body {
   font-family: "Roboto", sans-serif;
-  color: var(--color-black);
+  background-color: var(--bg-color);
+  color: var(--main-text-color);
 }
 
 .body__container {

@@ -11,14 +11,14 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: var(--color-white);
+  background-color: var(--bg-color);
   border-radius: 10px;
   cursor: pointer;
   transition: 0.1s linear;
 }
 
 .checkbox__custom:hover {
-  background-color: var(--color-grey);
+  background-color: var(--bg-color-hover);
 }
 
 .checkbox__custom::before {
