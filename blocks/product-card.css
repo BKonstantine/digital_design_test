@@ -9,27 +9,33 @@
   border: 1px solid var(--border-color);
 }
 .product-card:hover {
-  box-shadow: 1px 0 5px 3px var(--box-shadow-color)
-    
+  box-shadow: 1px 0 5px 3px var(--box-shadow-color);
 }
 
 .product-card__figure {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
   color: var(--product-card-text-color);
 }
 
 .product-card__image {
-  width: 100%;  
+  width: 100%;
   object-fit: cover;
 }
 
+.product-card__figcaption {
+  font-weight: 700;
+}
+
 .product-card__date {
+  flex-grow: 0;
   color: var(--product-card-text-color);
 }
 
 .product-card__button {
+  flex-grow: 0;
   margin: 0;
   border: 0;
   width: 100%;
