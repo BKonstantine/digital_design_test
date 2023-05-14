@@ -52,6 +52,21 @@ const renderCard = (container, list) => {
 };
 
 
+window.addEventListener('scroll', () => { 
+ 
+ const scrollPosition = document.documentElement.scrollTop;
+  console.log(scrollPosition);
+
+/* let headerWrapper = document.querySelector('.header-wrapper');
+console.log(headerWrapper);
+
+if(scrollTop >= 100){
+  headerWrapper.classList.add('hide');
+}else{    
+  headerWrapper.classList.remove('hide');
+} */
+});
+
 themeButton.addEventListener("click", changeColorScheme);
 navItems.forEach((item) => {
   item.addEventListener("click", () => scrollIntoCategory(item.id));
