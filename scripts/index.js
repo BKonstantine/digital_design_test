@@ -40,7 +40,7 @@ const createProductCard = (item) => {
   cardImage.src = item.link;
   cardImage.alt = item.name;
   cardName.textContent = item.name;
-  cardDate.textContent = getFormattedDate(Date.now());
+  cardDate.textContent = getFormattedDate("15.01.2023");
   return card;
 };
 

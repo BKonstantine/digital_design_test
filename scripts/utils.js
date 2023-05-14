@@ -1,4 +1,4 @@
-export function getFormattedDate(date) {
+export function getFormattedDate(dateString) {
   const daysOfWeek = [
     "Воскресенье",
     "Понедельник",
@@ -23,11 +23,17 @@ export function getFormattedDate(date) {
     "декабря",
   ];
 
-  const dateObj = new Date(date);
+  const dateParts = dateString.split(".");  
+  const day = parseInt(dateParts[0]);
+  const month = parseInt(dateParts[1]) - 1;
+  const year = parseInt(dateParts[2]);
+
+  const dateObj = new Date(year, month, day);
   const dayOfWeek = daysOfWeek[dateObj.getDay()];
-  const weekNumber = Math.ceil(dateObj.getDate() / 7);
-  const month = months[dateObj.getMonth()];
-  const year = dateObj.getFullYear();
-  const formattedDate = `${dayOfWeek}, ${weekNumber} неделя ${month} ${year} года`;
+  const weekNumber = Math.ceil(day / 7);
+  const monthName = months[month];
+
+  const formattedDate = `${dayOfWeek}, ${weekNumber} неделя ${monthName} ${year} года`;
+
   return formattedDate;
 }

@@ -76,7 +76,7 @@ export const vegetables = [
   },
   {
     name: "Помидоры",
-    link: "https://vkustorg.com/image/cache/bakinsk%20cherri/2-1000x1000.jpg",
+    link: "https://vkustorg.com/image/cache/bakinsk%20cherri/1-500x500.jpg",
   },
   {
     name: "Тыква",
