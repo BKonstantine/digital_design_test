@@ -7,3 +7,12 @@
 @import url(./blocks/main.css);
 @import url(./blocks/nav.css);
 @import url(./blocks/product-card.css);
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #171717;
+  --color-green: #6be0a8;
+  --color-red: #f9465c;
+  --color-accent: #5d5fef;
+  --color-grey: #f0efef;
+}

@@ -8,3 +8,12 @@
   flex-direction: column;
   gap: 5px;
 }
+
+.nav__item {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.nav__item:hover {
+  color: var(--color-accent);
+}

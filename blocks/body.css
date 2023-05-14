@@ -6,6 +6,7 @@
 
 .body {
   font-family: "Roboto", sans-serif;
+  color: var(--color-black);
 }
 
 .body__container {
