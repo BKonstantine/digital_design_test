@@ -1,6 +1,7 @@
 .header {
-  padding: 20px 10px;
-  display: flex;
+  padding: 20px 10px;  
+  flex: 0 0 auto;
+  display: flex;  
   align-items: center;
   justify-content: space-between;  
   border-bottom: 1px solid var(--bg-color-hover);

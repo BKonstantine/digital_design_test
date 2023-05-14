@@ -1,3 +1,5 @@
+@import url(./normalize.css);
+@import url(./blocks/html.css);
 @import url(./blocks/body.css);
 @import url(./blocks/category.css);
 @import url(./blocks/checkbox.css);
@@ -7,5 +9,3 @@
 @import url(./blocks/main.css);
 @import url(./blocks/nav.css);
 @import url(./blocks/product-card.css);
-
-
