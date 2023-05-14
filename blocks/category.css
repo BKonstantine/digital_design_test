@@ -2,6 +2,23 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 20px;
+}
+
+.category__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .category__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .category__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
