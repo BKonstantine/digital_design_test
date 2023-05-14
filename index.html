@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="./color-scheme/light.css" id="color-scheme">
+    <link rel="stylesheet" href="./color-scheme/light.css" id="color-scheme" />
     <title>Digital Design Test</title>
   </head>
   <body class="body">
@@ -26,12 +26,12 @@
         </nav>
         <label class="checkbox">
           <input type="checkbox" class="checkbox__real" />
-          <span class="checkbox__custom"></span>          
+          <span class="checkbox__custom"></span>
         </label>
       </header>
       <main class="main">
         <section class="category">
-          <h2 class="category__title"></h2>
+          <h2 class="category__title">Овощи</h2>
           <div class="category__container">
             <article class="product-card" aria-label="product-card">
               <figure class="product-card__figure">
@@ -44,12 +44,11 @@
                   Морковь
                 </figcaption>
               </figure>
-              <div class="product-card__container">
-                <p class="product-card__date"></p>
-                  Среда, 3 неделя Декабря 2021 года
-                </p>
-                <button type="button">Купить</button>
-              </div>
+
+              <p class="product-card__date">
+                Среда, 3 неделя Декабря 2021 года
+              </p>
+              <button type="button" class="product-card__button">Купить</button>
             </article>
           </div>
         </section>
@@ -73,7 +72,7 @@
     </template>
     <!-- Темплейт карточки товара -->
     <template class="template-product-card">
-      <article class="product-card">
+      <article class="product-card" aria-label="product-card">
         <figure class="product-card__figure">
           <img
             src="https://plus.unsplash.com/premium_photo-1664277022334-de9ab23c0ee2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1147&q=80"
