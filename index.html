@@ -19,9 +19,9 @@
       <header class="header">
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item">Фрукты</li>
-            <li class="nav__item">Овощи</li>
-            <li class="nav__item">Ягоды</li>
+            <li class="nav__item" id="fruits">Фрукты</li>
+            <li class="nav__item" id="vegetables">Овощи</li>
+            <li class="nav__item" id="berries">Ягоды</li>
           </ul>
         </nav>
         <label class="checkbox">
@@ -30,8 +30,8 @@
         </label>
       </header>
       <main class="main">
-        <section class="category">
-          <h2 class="category__title">Фрукты</h2>
+        <section class="category id="fruits"">
+          <h2 class="category__title" >Фрукты</h2>
           <div class="category__container">
             <article class="product-card" aria-label="product-card">
               <figure class="product-card__figure">
@@ -52,8 +52,8 @@
             </article>
           </div>
         </section>
-        <section class="category">
-          <h2 class="category__title">Овощи</h2>
+        <section class="category" id="vegetables">
+          <h2 class="category__title" >Овощи</h2>
           <div class="category__container">
             <article class="product-card" aria-label="product-card">
               <figure class="product-card__figure">
@@ -74,8 +74,8 @@
             </article>
           </div>
         </section>
-        <section class="category">
-          <h2 class="category__title">Ягоды</h2>
+        <section class="category" id="berries">
+          <h2 class="category__title" >Ягоды</h2>
           <div class="category__container">
             <article class="product-card" aria-label="product-card">
               <figure class="product-card__figure">
@@ -100,9 +100,15 @@
       <footer class="footer">
         <nav class="nav">
           <ul class="nav__list nav__list_position_footer">
-            <li class="nav__item nav__item_position_footer">Фрукты</li>
-            <li class="nav__item nav__item_position_footer">Овощи</li>
-            <li class="nav__item nav__item_position_footer">Ягоды</li>
+            <li class="nav__item nav__item_position_footer" id="fruits">
+              Фрукты
+            </li>
+            <li class="nav__item nav__item_position_footer" id="vegetables">
+              Овощи
+            </li>
+            <li class="nav__item nav__item_position_footer" id="berries">
+              Ягоды
+            </li>
           </ul>
         </nav>
       </footer>

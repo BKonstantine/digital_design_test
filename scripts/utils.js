@@ -1,4 +1,4 @@
-function getFormattedDate(date) {
+export function getFormattedDate(date) {
   const daysOfWeek = [
     "Воскресенье",
     "Понедельник",
