@@ -31,5 +31,3 @@ export function getFormattedDate(date) {
   const formattedDate = `${dayOfWeek}, ${weekNumber} неделя ${month} ${year} года`;
   return formattedDate;
 }
-
-getFormattedDate(Date.now());

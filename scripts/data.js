@@ -1,4 +1,4 @@
-const vegetables = [
+export const vegetables = [
   {
     name: "Кабачки",
     link: "https://vkustorg.com/image/cache/Ovochi_frukty/14047_fullimage-500x500.jpg",
