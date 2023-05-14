@@ -11,6 +11,8 @@
 
 .nav__item {
   padding: 5px 10px;
+  font-weight: 700;
+  font-size: 22px;
   cursor: pointer;
 }
 
