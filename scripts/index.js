@@ -1,12 +1,14 @@
 import "./data.js";
 import "./utils.js";
 
-import { vegetables } from "./data.js";
+import { fruits, vegetables, berries } from "./data.js";
 import { getFormattedDate } from "./utils.js";
 
 const themeButton = document.querySelector(".checkbox__real");
 const navItems = Array.from(document.querySelectorAll(".nav__item"));
+const fruitsContainer = document.querySelector("#fruits-container");
 const vegetablesContainer = document.querySelector("#vegetables-container");
+const berriesContainer = document.querySelector("#berries-container");
 const templateProductCard = document.querySelector(
   ".template-product-card"
 ).content;
@@ -24,9 +26,9 @@ themeButton.addEventListener("click", changeColorScheme);
 
 const scrollIntoCategory = (id) => {
   console.log(id);
-  const categoryTitle = document.querySelector(`#${id}`);
+  const categoryTitle = document.querySelector(`#${id}-category`);
   categoryTitle.scrollIntoView({
-    block: "end",
+    block: "start",
     behavior: "smooth",
   });
 };
@@ -52,11 +54,13 @@ const createProductCard = (item) => {
   return card;
 };
 
-function renderCard() {
-  const cardList = vegetables.map((item) => {
+const renderCard = (container, list) => {
+  const cardList = list.map((item) => {
     return createProductCard(item);
   });
-  vegetablesContainer.append(...cardList);
-}
+  container.append(...cardList);
+};
 
-renderCard();
+renderCard(fruitsContainer, fruits);
+renderCard(vegetablesContainer, vegetables);
+renderCard(berriesContainer, berries);
