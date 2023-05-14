@@ -1,13 +1,24 @@
 .header {
   position: fixed;
-  top: 0;  
-  z-index: 1;  
+  top: 0;
+  z-index: 1;
   width: 100%;
-  padding: 20px 10px;  
+  max-width: 1024px;
+  padding: 20px 10px;
   flex: 0 0 auto;
-  display: flex;  
+  display: flex;
   align-items: center;
-  justify-content: space-between;  
+  justify-content: space-between;
   border-bottom: 1px solid var(--bg-color-hover);
   background-color: var(--bg-color);
+}
+
+.header__button {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__button {
+    display: block;
+  }
 }

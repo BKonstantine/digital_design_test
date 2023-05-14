@@ -3,8 +3,10 @@ import "./utils.js";
 import { fruits, vegetables, berries } from "./data.js";
 import { getFormattedDate } from "./utils.js";
 
-const themeButton = document.querySelector(".checkbox__real");
+const themeButton = document.querySelector(".color-scheme-button__real");
 const scrollButton = document.querySelector(".scroll-button");
+const burgerButton = document.querySelector(".nav__burger-button");
+const headerNavList = document.querySelector(".nav__list_position_header");
 const navItems = Array.from(document.querySelectorAll(".nav__item"));
 const fruitsContainer = document.querySelector("#fruits-container");
 const vegetablesContainer = document.querySelector("#vegetables-container");
@@ -55,6 +57,10 @@ const renderCard = (container, list) => {
   container.append(...cardList);
 };
 
+const toggleClass = (item, className) => {
+  item.classList.toggle(className);
+};
+
 /* Установить слушатели событий */
 window.addEventListener("scroll", () => {
   const scrollPosition = document.documentElement.scrollTop;
@@ -63,6 +69,10 @@ window.addEventListener("scroll", () => {
   } else {
     scrollButton.classList.remove("scroll-button_active");
   }
+});
+
+burgerButton.addEventListener("click", () => {
+  toggleClass(headerNavList, "nav__list_active");
 });
 
 themeButton.addEventListener("click", changeColorScheme);

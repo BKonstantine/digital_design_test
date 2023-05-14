@@ -1,4 +1,4 @@
-.checkbox__real {
+.color-scheme-button__real {
   width: 0;
   height: 0;
   opacity: 0;
@@ -6,7 +6,11 @@
   z-index: -1;
 }
 
-.checkbox__custom {
+.color-scheme-button {
+  align-self: flex-start;
+}
+
+.color-scheme-button__custom {
   position: relative;
   display: inline-block;
   width: 40px;
@@ -17,11 +21,11 @@
   transition: 0.1s linear;
 }
 
-.checkbox__custom:hover {
+.color-scheme-button__custom:hover {
   background-color: var(--bg-color-hover);
 }
 
-.checkbox__custom::before {
+.color-scheme-button__custom::before {
   content: "";
   display: inline-block;
   width: 30px;
@@ -36,6 +40,6 @@
   transition: 0.1s ease-in-out;
 }
 
-.checkbox__real:checked + .checkbox__custom::before {
+.color-scheme-button__real:checked + .color-scheme-button__custom::before {
   background-image: url(../image/icon-moon.svg);
 }

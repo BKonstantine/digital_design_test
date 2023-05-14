@@ -26,3 +26,26 @@
   font-weight: 400;
   font-size: 14px;
 }
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__list {
+    display: none;
+    width: 100%;
+    gap: 5px;
+    flex-direction: column;
+    background-color: var(--bg-color);
+  }
+  
+  .nav__item {
+    font-size: 18px;
+  }
+}
+
+.nav__list_active {
+  display: flex;
+}

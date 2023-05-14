@@ -16,21 +16,24 @@
   </head>
   <body class="body">
     <div class="container body__container">
-      <header class="header container">
+      <header class="header">
         <nav class="nav">
-          <label class="burger-button">
-            <input type="checkbox" class="burger-button__real" />
+          <label class="burger-button header__button">
+            <input
+              type="checkbox"
+              class="burger-button__real nav__burger-button"
+            />
             <span class="burger-button__custom"></span>
           </label>
-          <ul class="nav__list">
+          <ul class="nav__list nav__list_position_header">
             <li class="nav__item" id="fruits">Фрукты</li>
             <li class="nav__item" id="vegetables">Овощи</li>
             <li class="nav__item" id="berries">Ягоды</li>
           </ul>
         </nav>
-        <label class="checkbox">
-          <input type="checkbox" class="checkbox__real" />
-          <span class="checkbox__custom"></span>
+        <label class="color-scheme-button">
+          <input type="checkbox" class="color-scheme-button__real" />
+          <span class="color-scheme-button__custom"></span>
         </label>
       </header>
       <main class="main">
@@ -45,7 +48,7 @@
         <section class="category" id="berries-category">
           <h2 class="category__title">Ягоды</h2>
           <div class="category__container" id="berries-container"></div>
-        </section>        
+        </section>
       </main>
       <footer class="footer">
         <nav class="nav">
@@ -63,7 +66,7 @@
         </nav>
       </footer>
     </div>
-    <button type="button" class="scroll-button"></button>    
+    <button type="button" class="scroll-button"></button>
     <!-- Темплейт карточки товара -->
     <template class="template-product-card">
       <article class="product-card" aria-label="product-card">
