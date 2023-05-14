@@ -11,6 +11,7 @@ const berriesContainer = document.querySelector("#berries-container");
 const templateProductCard = document.querySelector(
   ".template-product-card"
 ).content;
+const scrollButton = document.querySelector(".scroll-button");
 
 const changeColorScheme = () => {
   if (colorScheme.getAttribute("href") === "./color-scheme/light.css") {
@@ -22,8 +23,8 @@ const changeColorScheme = () => {
 
 const colorScheme = document.querySelector("#color-scheme");
 
-const scrollIntoCategory = (id) => { 
-  const category = document.querySelector(`#${id}-category`);  
+const scrollIntoCategory = (id) => {
+  const category = document.querySelector(`#${id}-category`);
   category.scrollIntoView({
     block: "start",
     behavior: "smooth",
@@ -51,26 +52,20 @@ const renderCard = (container, list) => {
   container.append(...cardList);
 };
 
-
-window.addEventListener('scroll', () => { 
- 
- const scrollPosition = document.documentElement.scrollTop;
-  console.log(scrollPosition);
-
-/* let headerWrapper = document.querySelector('.header-wrapper');
-console.log(headerWrapper);
-
-if(scrollTop >= 100){
-  headerWrapper.classList.add('hide');
-}else{    
-  headerWrapper.classList.remove('hide');
-} */
+window.addEventListener("scroll", () => {
+  const scrollPosition = document.documentElement.scrollTop;
+  if (scrollPosition >= 100) {
+    scrollButton.classList.add("scroll-button_active");
+  } else {
+    scrollButton.classList.remove("scroll-button_active");
+  }
 });
 
 themeButton.addEventListener("click", changeColorScheme);
 navItems.forEach((item) => {
   item.addEventListener("click", () => scrollIntoCategory(item.id));
 });
+scrollButton.addEventListener('click', () => scrollIntoCategory('fruits'))
 renderCard(fruitsContainer, fruits);
 renderCard(vegetablesContainer, vegetables);
 renderCard(berriesContainer, berries);

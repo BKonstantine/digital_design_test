@@ -1,0 +1,22 @@
+.scroll-button {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-image: url(../image/icon-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  background-color: var(--bg-color);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in;
+}
+
+.scroll-button_active {
+  visibility: visible;
+  opacity: 1;
+}
