@@ -1,0 +1,37 @@
+.burger-button__real {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.burger-button__custom {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.burger-button__custom::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../image/icon-burger.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .1s ease-in-out;
+}
+
+.burger-button__real:checked + .burger-button__custom::before {
+  background-image: url(../image/icon-close.svg);
+}

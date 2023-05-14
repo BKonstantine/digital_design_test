@@ -1,7 +1,7 @@
 .scroll-button {
   position: fixed;
   right: 50px;
-  bottom: 50px;
+  bottom: 102px;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -19,4 +19,17 @@
 .scroll-button_active {
   visibility: visible;
   opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .scroll-button {
+    right: 25px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .scroll-button {
+    width: 50px;
+    height: 50px;
+  }
 }
