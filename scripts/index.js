@@ -59,7 +59,7 @@ const closeModalOnEsc = (evt) => {
 /* Отправка формы */
 const handleSubmit = (e) => {
   e.preventDefault();
-  alert("Поздравляю с покупкой!")
+  alert("Поздравляю с покупкой!");
 };
 
 /* Создать карточку продукта */
@@ -113,16 +113,14 @@ navItems.forEach((item) => {
 
 scrollButton.addEventListener("click", () => scrollIntoCategory("fruits"));
 
-modalOverlays.forEach((modal) => {
+modalOverlays.forEach((modal) => {  
+  modal.addEventListener("submit", handleSubmit);
   modal.addEventListener("click", (evt) => {
     if (evt.target.classList.contains("modal__button_type_close")) {
       closeModal(modal);
     }
     if (evt.target.classList.contains("overlay_active")) {
       closeModal(modal);
-    }
-    if (evt.target.classList.contains("modal__button_type_submit")) {
-      handleSubmit(evt)
     }
   });
 });
