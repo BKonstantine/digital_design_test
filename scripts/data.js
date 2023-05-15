@@ -39,6 +39,18 @@ export const fruits = [
     name: "Помело",
     link: "https://vkustorg.com/image/cache/Ovochi_frukty/pomelo-500x500.jpeg",
   },
+  {
+    name: "Яблоко Гренни Смит",
+    link: "https://vkustorg.com/image/cache/Grenni/1-500x500.jpg",
+  },
+  {
+    name: "Яблоки Гренни Смит",
+    link: "https://vkustorg.com/image/cache/Grenni/1-500x500.jpg",
+  },
+  {
+    name: "Яблоки Голден",
+    link: "https://vkustorg.com/image/cache/Ovochi_frukty/full_56180606d9e21a0008000273-500x500.jpg",
+  },
 ];
 
 export const vegetables = [
@@ -82,6 +94,14 @@ export const vegetables = [
     name: "Тыква",
     link: "https://vkustorg.com/image/cache/Ovochi_frukty/pumpkin-500x500.jpg",
   },
+  {
+    name: "Салат Айсберг",
+    link: "https://vkustorg.com/image/cache/Ovochi_frukty/salat-500x500.jpg",
+  },
+  {
+    name: "Салат Китайский",
+    link: "https://vkustorg.com/image/cache/Ovochi_frukty/pek-500x500.jpg",
+  },
 ];
 
 export const berries = [
@@ -124,5 +144,9 @@ export const berries = [
   {
     name: "Черника",
     link: "https://vkustorg.com/image/cache/Ovochi_frukty/blueberries1-500x500.jpg",
+  },
+  {
+    name: "Слива",
+    link: "https://vkustorg.com/image/cache/Ovochi_frukty/sliva-500x500.jpg",
   },
 ];
