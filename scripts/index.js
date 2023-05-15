@@ -5,7 +5,7 @@ import { getFormattedDate } from "./utils.js";
 
 const themeButton = document.querySelector(".color-scheme-button__real");
 const scrollButton = document.querySelector(".scroll-button");
-const burgerButton = document.querySelector(".nav__burger-button");
+const burgerButton = document.querySelector("#burger-menu__toggle");
 const headerNavList = document.querySelector(".nav__list_position_header");
 const navItems = Array.from(document.querySelectorAll(".nav__item"));
 const fruitsContainer = document.querySelector("#fruits-container");

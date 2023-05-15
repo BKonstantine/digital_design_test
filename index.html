@@ -18,13 +18,12 @@
     <div class="container body__container">
       <header class="header">
         <nav class="nav">
-          <label class="burger-button header__button">
-            <input
-              type="checkbox"
-              class="burger-button__real nav__burger-button"
-            />
-            <span class="burger-button__custom"></span>
-          </label>
+          <div class="burger-menu header__button">
+            <input id="burger-menu__toggle" type="checkbox" />
+            <label class="burger-menu__btn" for="burger-menu__toggle">
+              <span></span>
+            </label>
+          </div>
           <ul class="nav__list nav__list_position_header">
             <li class="nav__item" id="fruits">Фрукты</li>
             <li class="nav__item" id="vegetables">Овощи</li>
@@ -67,7 +66,7 @@
       </footer>
     </div>
     <button type="button" class="scroll-button"></button>
-    <div class="overlay">
+    <!-- <div class="overlay">
       <form class="modal">
         <p class="modal__title"></p>
         <fieldset class="modal__fieldset">
@@ -85,7 +84,7 @@
           </label>
         </fieldset>
       </form>
-    </div>
+    </div> -->
     <!-- Темплейт карточки товара -->
     <template class="template-product-card">
       <article class="product-card" aria-label="product-card">

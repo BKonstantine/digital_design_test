@@ -4,6 +4,10 @@
   gap: 10px;
 }
 
+.nav__list_position_header {
+  margin-top: 20px;
+}
+
 .nav__list_position_footer {
   max-width: 100px;
   flex-direction: column;
@@ -40,7 +44,7 @@
     flex-direction: column;
     background-color: var(--bg-color);
   }
-  
+
   .nav__item {
     font-size: 18px;
   }
