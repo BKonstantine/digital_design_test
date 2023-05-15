@@ -2,13 +2,17 @@
   --bg-color: #ffffff;
   --bg-color-burger: #171717;
   --bg-color-overlay: rgba(112, 112, 112, 0.4);
+  --bg-color-form: #ffffff;
   --bg-color-hover: #f0efef;
   --bg-color-product-card: #ffffff;
 
   --border-color: #c2c2c2;
+  --form-border-color: #c2c2c2;
   --box-shadow-color: #c2c2c2;
 
   --main-text-color: #171717;
+  --form-text-color: #171717;
+  --product-card-text-color: #171717;
   --second-text-color: #ffffff;
   --accent-text-color: #5d5fef;
 }

@@ -8,6 +8,8 @@ const scrollButton = document.querySelector(".scroll-button");
 const burgerButton = document.querySelector("#burger-menu__toggle");
 const headerNavList = document.querySelector(".nav__list_position_header");
 const navItems = Array.from(document.querySelectorAll(".nav__item"));
+const modalOverlay = document.querySelector(".overlay");
+const modalOverlays = Array.from(document.querySelectorAll(".overlay"));
 const fruitsContainer = document.querySelector("#fruits-container");
 const vegetablesContainer = document.querySelector("#vegetables-container");
 const berriesContainer = document.querySelector("#berries-container");
@@ -18,7 +20,7 @@ const templateProductCard = document.querySelector(
 
 /* Сменить цветовую схему */
 const changeColorScheme = () => {
-  if (colorScheme.getAttribute("href") === "./color-scheme/light.css") {
+  if (colorScheme.getAttribute("href") == "./color-scheme/light.css") {
     colorScheme.href = "./color-scheme/dark.css";
   } else {
     colorScheme.href = "./color-scheme/light.css";
@@ -34,6 +36,27 @@ const scrollIntoCategory = (id) => {
   });
 };
 
+
+/* Открыть модальное окно */
+const openModal = (modal) => {
+  modal.classList.add("overlay_active");
+  document.addEventListener("keydown", closeModalOnEsc);
+};
+
+/* Закрыть модальное окно */
+const closeModal = (modal) => {
+  modal.classList.remove("overlay_active");
+  document.removeEventListener("keydown", closeModalOnEsc);
+};
+
+/* Закрыть модальное окно с клавиатуры*/
+const closeModalOnEsc = (evt) => {
+  if (evt.key === "Escape") {
+    const modalOpened = document.querySelector(".overlay_active");
+    closeModal(modalOpened);
+  }
+};
+
 /* Создать карточку продукта */
 const createProductCard = (item) => {
   const card = templateProductCard
@@ -42,10 +65,12 @@ const createProductCard = (item) => {
   const cardImage = card.querySelector(".product-card__image");
   const cardName = card.querySelector(".product-card__figcaption");
   const cardDate = card.querySelector(".product-card__date");
+  const cardBtn = card.querySelector(".product-card__button");
   cardImage.src = item.link;
   cardImage.alt = item.name;
   cardName.textContent = item.name;
   cardDate.textContent = getFormattedDate("15.12.2021");
+  cardBtn.addEventListener("click", () => openModal(modalOverlay));
   return card;
 };
 
@@ -76,10 +101,23 @@ burgerButton.addEventListener("click", () => {
 });
 
 themeButton.addEventListener("click", changeColorScheme);
+
 navItems.forEach((item) => {
   item.addEventListener("click", () => scrollIntoCategory(item.id));
 });
+
 scrollButton.addEventListener("click", () => scrollIntoCategory("fruits"));
+
+modalOverlays.forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (evt.target.classList.contains("modal__button_type_close")) {
+      closeModal(modal);
+    }
+    if (evt.target.classList.contains("overlay_active")) {
+      closeModal(modal);
+    }
+  });
+});
 
 renderCard(fruitsContainer, fruits);
 renderCard(vegetablesContainer, vegetables);
