@@ -43,6 +43,31 @@
   align-items: center;
 }
 
+.modal__radio-button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.modal__color-block {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--form-border-color);
+}
+
+.modal__color-block_color_red {
+  background-color: #FF0000;
+}
+
+.modal__color-block_color_green {
+  background-color: #008000;
+}
+
+.modal__color-block_color_yellow {
+  background-color: #FFFF00;
+}
+
 .modal__textarea {
   padding: 10px;
   resize: vertical;
@@ -56,7 +81,7 @@
   border: 0;
 }
 
-.modal__button_type_buy {
+.modal__button_type_submit {
   width: 100%;
   max-width: 300px;
   min-width: 100px;

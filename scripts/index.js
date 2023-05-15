@@ -36,7 +36,6 @@ const scrollIntoCategory = (id) => {
   });
 };
 
-
 /* Открыть модальное окно */
 const openModal = (modal) => {
   modal.classList.add("overlay_active");
@@ -55,6 +54,12 @@ const closeModalOnEsc = (evt) => {
     const modalOpened = document.querySelector(".overlay_active");
     closeModal(modalOpened);
   }
+};
+
+/* Отправка формы */
+const handleSubmit = (e) => {
+  e.preventDefault();
+  alert("Поздравляю с покупкой!")
 };
 
 /* Создать карточку продукта */
@@ -115,6 +120,9 @@ modalOverlays.forEach((modal) => {
     }
     if (evt.target.classList.contains("overlay_active")) {
       closeModal(modal);
+    }
+    if (evt.target.classList.contains("modal__button_type_submit")) {
+      handleSubmit(evt)
     }
   });
 });
