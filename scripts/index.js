@@ -108,7 +108,8 @@ burgerButton.addEventListener("click", () => {
 themeButton.addEventListener("click", changeColorScheme);
 
 navItems.forEach((item) => {
-  item.addEventListener("click", () => scrollIntoCategory(item.id));
+  const id = item.id.split('-')[0]
+  item.addEventListener("click", () => scrollIntoCategory(id));
 });
 
 scrollButton.addEventListener("click", () => scrollIntoCategory("fruits"));
